@@ -7,7 +7,7 @@ rh._.exports(defaultTopic);
 rh.consts('DEFAULT_TOPIC', encodeURI("html/addDeleteModify.html"));
 rh.consts('HOME_FILEPATH', encodeURI('index.htm'));
 rh.consts('START_FILEPATH', encodeURI('index.htm'));
-rh.consts('HELP_ID', 'aaeedfb8-60de-4f90-8cea-02c2e31fc605' || 'preview');
+rh.consts('HELP_ID', '23b18c39-ccb2-4baa-a0ac-65a4cd50e96a' || 'preview');
 rh.consts('LNG_SUBSTR_SEARCH', 0);
 
 model.publish(rh.consts('KEY_LNG_NAME'), "es");
