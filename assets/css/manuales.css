@@ -1,6 +1,6 @@
 /*Created with Adobe RoboHelp*/
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap");
-.RH-LAYOUT-CENTERPANEL-topic-box h1.Titulo1, .RH-LAYOUT-FOOTER-container h1.Titulo1 {
+.RH-LAYOUT-CENTERPANEL-topic-box h1.Titulo1, .RH-LAYOUT-FOOTER-container h1.Titulo1, .RH-LAYOUT-HOMEPAGE-FOOTER-container h1.Titulo1 {
   font-weight: 600;
   font-family: 'IBM Plex Sans';
   font-size: 24px;
@@ -17,7 +17,7 @@
   transform-origin: 0px 0px;
   text-indent: 0px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box h2.Titulo2, .RH-LAYOUT-FOOTER-container h2.Titulo2 {
+.RH-LAYOUT-CENTERPANEL-topic-box h2.Titulo2, .RH-LAYOUT-FOOTER-container h2.Titulo2, .RH-LAYOUT-HOMEPAGE-FOOTER-container h2.Titulo2 {
   font-family: 'IBM Plex Sans';
   font-size: 20px;
   color: #6574CD;
@@ -26,7 +26,7 @@
   margin-top: 15px;
   margin-bottom: 20px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box h3.Titulo3, .RH-LAYOUT-FOOTER-container h3.Titulo3 {
+.RH-LAYOUT-CENTERPANEL-topic-box h3.Titulo3, .RH-LAYOUT-FOOTER-container h3.Titulo3, .RH-LAYOUT-HOMEPAGE-FOOTER-container h3.Titulo3 {
   font-family: 'IBM Plex Sans';
   font-size: 18px;
   text-align: left;
@@ -35,7 +35,7 @@
   margin-top: 15px;
   margin-bottom: 20px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box p.Texto, .RH-LAYOUT-FOOTER-container p.Texto {
+.RH-LAYOUT-CENTERPANEL-topic-box p.Texto, .RH-LAYOUT-FOOTER-container p.Texto, .RH-LAYOUT-HOMEPAGE-FOOTER-container p.Texto {
   font-family: 'IBM Plex Sans';
   font-weight: normal;
   font-size: 16px;
@@ -43,7 +43,7 @@
   margin-bottom: 10px;
   margin-right: 10px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box img.imageProduct, .RH-LAYOUT-FOOTER-container img.imageProduct {
+.RH-LAYOUT-CENTERPANEL-topic-box img.imageProduct, .RH-LAYOUT-FOOTER-container img.imageProduct, .RH-LAYOUT-HOMEPAGE-FOOTER-container img.imageProduct {
   border-left-style: solid;
   border-top-style: solid;
   border-right-style: solid;
@@ -60,7 +60,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box img.imageProductSmall, .RH-LAYOUT-FOOTER-container img.imageProductSmall {
+.RH-LAYOUT-CENTERPANEL-topic-box img.imageProductSmall, .RH-LAYOUT-FOOTER-container img.imageProductSmall, .RH-LAYOUT-HOMEPAGE-FOOTER-container img.imageProductSmall {
   border-left-style: solid;
   border-top-style: solid;
   border-right-style: solid;
@@ -77,7 +77,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box img.videoProduct, .RH-LAYOUT-FOOTER-container img.videoProduct {
+.RH-LAYOUT-CENTERPANEL-topic-box img.videoProduct, .RH-LAYOUT-FOOTER-container img.videoProduct, .RH-LAYOUT-HOMEPAGE-FOOTER-container img.videoProduct {
   border-left-style: solid;
   border-top-style: solid;
   border-right-style: solid;
@@ -94,21 +94,21 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box aside.temasAside, .RH-LAYOUT-FOOTER-container aside.temasAside {}
-.RH-LAYOUT-CENTERPANEL-topic-box h4.Titulo4, .RH-LAYOUT-FOOTER-container h4.Titulo4 {
+.RH-LAYOUT-CENTERPANEL-topic-box aside.temasAside, .RH-LAYOUT-FOOTER-container aside.temasAside, .RH-LAYOUT-HOMEPAGE-FOOTER-container aside.temasAside {}
+.RH-LAYOUT-CENTERPANEL-topic-box h4.Titulo4, .RH-LAYOUT-FOOTER-container h4.Titulo4, .RH-LAYOUT-HOMEPAGE-FOOTER-container h4.Titulo4 {
   font-family: 'IBM Plex Sans';
   font-size: 1rem;
   color: #6574CD;
   font-weight: bold;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box p.Texto_footer, .RH-LAYOUT-FOOTER-container p.Texto_footer {
+.RH-LAYOUT-CENTERPANEL-topic-box p.Texto_footer, .RH-LAYOUT-FOOTER-container p.Texto_footer, .RH-LAYOUT-HOMEPAGE-FOOTER-container p.Texto_footer {
   font-size: 0.9rem;
   font-family: 'IBM Plex Sans';
   font-weight: normal;
   text-align: center;
   background-color: #E0E0E0;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box img.imgreports, .RH-LAYOUT-FOOTER-container img.imgreports {
+.RH-LAYOUT-CENTERPANEL-topic-box img.imgreports, .RH-LAYOUT-FOOTER-container img.imgreports, .RH-LAYOUT-HOMEPAGE-FOOTER-container img.imgreports {
   border-left-style: solid;
   border-top-style: solid;
   border-right-style: solid;
@@ -125,8 +125,8 @@
   margin-bottom: 20px;
   width: 80%;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box ul.Texto_con_vinetas, .RH-LAYOUT-FOOTER-container ul.Texto_con_vinetas {}
-.RH-LAYOUT-CENTERPANEL-topic-box ul.Texto_con_vinetas>li, .RH-LAYOUT-FOOTER-container ul.Texto_con_vinetas>li {
+.RH-LAYOUT-CENTERPANEL-topic-box ul.Texto_con_vinetas, .RH-LAYOUT-FOOTER-container ul.Texto_con_vinetas, .RH-LAYOUT-HOMEPAGE-FOOTER-container ul.Texto_con_vinetas {}
+.RH-LAYOUT-CENTERPANEL-topic-box ul.Texto_con_vinetas>li, .RH-LAYOUT-FOOTER-container ul.Texto_con_vinetas>li, .RH-LAYOUT-HOMEPAGE-FOOTER-container ul.Texto_con_vinetas>li {
   font-family: 'IBM Plex Sans';
   font-weight: normal;
   font-size: 1rem;
@@ -134,8 +134,8 @@
   margin-bottom: 10px;
   margin-right: 10px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box ul.Subtexto_con_vinetas, .RH-LAYOUT-FOOTER-container ul.Subtexto_con_vinetas {}
-.RH-LAYOUT-CENTERPANEL-topic-box ul.Subtexto_con_vinetas>li>ul>li, .RH-LAYOUT-FOOTER-container ul.Subtexto_con_vinetas>li>ul>li {
+.RH-LAYOUT-CENTERPANEL-topic-box ul.Subtexto_con_vinetas, .RH-LAYOUT-FOOTER-container ul.Subtexto_con_vinetas, .RH-LAYOUT-HOMEPAGE-FOOTER-container ul.Subtexto_con_vinetas {}
+.RH-LAYOUT-CENTERPANEL-topic-box ul.Subtexto_con_vinetas>li>ul>li, .RH-LAYOUT-FOOTER-container ul.Subtexto_con_vinetas>li>ul>li, .RH-LAYOUT-HOMEPAGE-FOOTER-container ul.Subtexto_con_vinetas>li>ul>li {
   font-family: 'IBM Plex Sans';
   font-weight: normal;
   font-size: 1rem;
@@ -144,7 +144,7 @@
   margin-right: 10px;
   margin-left: 20px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box ul.Subtexto_con_vinetas>li, .RH-LAYOUT-FOOTER-container ul.Subtexto_con_vinetas>li {
+.RH-LAYOUT-CENTERPANEL-topic-box ul.Subtexto_con_vinetas>li, .RH-LAYOUT-FOOTER-container ul.Subtexto_con_vinetas>li, .RH-LAYOUT-HOMEPAGE-FOOTER-container ul.Subtexto_con_vinetas>li {
   font-family: 'IBM Plex Sans';
   font-weight: normal;
   font-size: 1rem;
@@ -153,22 +153,40 @@
   margin-bottom: 10px;
   margin-right: 10px;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box p.anotaciones, .RH-LAYOUT-FOOTER-container p.anotaciones {
+.RH-LAYOUT-CENTERPANEL-topic-box p.anotaciones, .RH-LAYOUT-FOOTER-container p.anotaciones, .RH-LAYOUT-HOMEPAGE-FOOTER-container p.anotaciones {
   font-family: 'IBM Plex Sans';
   font-size: 0.8rem;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box p.textonegrita, .RH-LAYOUT-FOOTER-container p.textonegrita {
+.RH-LAYOUT-CENTERPANEL-topic-box p.textonegrita, .RH-LAYOUT-FOOTER-container p.textonegrita, .RH-LAYOUT-HOMEPAGE-FOOTER-container p.textonegrita {
   font-family: 'IBM Plex Sans';
   font-weight: bold;
 }
-.RH-LAYOUT-CENTERPANEL-topic-box content.palabranegrita, .RH-LAYOUT-FOOTER-container content.palabranegrita {
+.RH-LAYOUT-CENTERPANEL-topic-box content.palabranegrita, .RH-LAYOUT-FOOTER-container content.palabranegrita, .RH-LAYOUT-HOMEPAGE-FOOTER-container content.palabranegrita {
   font-weight: bold;
   font-family: 'IBM Plex Sans';
 }
-.RH-LAYOUT-CENTERPANEL-topic-box content.palabrasinegrita, .RH-LAYOUT-FOOTER-container content.palabrasinegrita {
+.RH-LAYOUT-CENTERPANEL-topic-box content.palabrasinegrita, .RH-LAYOUT-FOOTER-container content.palabrasinegrita, .RH-LAYOUT-HOMEPAGE-FOOTER-container content.palabrasinegrita {
   font-weight: normal;
   font-family: 'IBM Plex Sans';
 }
-.RH-LAYOUT-CENTERPANEL-topic-box ul.Disc, .RH-LAYOUT-FOOTER-container ul.Disc {
+.RH-LAYOUT-CENTERPANEL-topic-box ul.Disc, .RH-LAYOUT-FOOTER-container ul.Disc, .RH-LAYOUT-HOMEPAGE-FOOTER-container ul.Disc {
   list-style: disc;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box img.imageproductxs, .RH-LAYOUT-FOOTER-container img.imageproductxs, .RH-LAYOUT-HOMEPAGE-FOOTER-container img.imageproductxs {
+  font-family: 'IBM Plex Sans';
+  border-left-color: #808080;
+  border-top-color: #808080;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  width: 35%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-left-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
 }
