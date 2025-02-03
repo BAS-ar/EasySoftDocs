@@ -1,1 +1,1 @@
-rh._.exports({"0":[["exaFooter"]],"1":[[" ","Exacta EasySoft"," ","v:","1.0.0.0 - 10/01/2025"," ","-"," ","Powered by"," ","-"," ","Términos y condiciones."]],"id":"0"})
+rh._.exports({"0":[["exaFooter"]],"1":[[" ","Exacta EasySoft"," ","v:","1.0.0.0 - 03/02/2025"," ","-"," ","Powered by"," ","-"," ","Términos y condiciones."]],"id":"0"})
