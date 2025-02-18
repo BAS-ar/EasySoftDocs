@@ -56,11 +56,11 @@
   <h2 class="Titulo2">Registrar de asientos</h2>
   <p class="Texto">Para agregar un nuevo asiento tenes que presionar <img src="../assets/images/plus.jpg"/> y completar la información de las solapas &quot;General&quot; y &quot;Cuentas&quot;.</p>
   <h3 class="Titulo3">Solapa General</h3>
-  <p class="Texto">Esta es la primera solapa que se presenta y te ofrece el  próximo número de asiento a ingresar,   la fecha del día y el tipo &quot;Normal&quot;.</p>
+  <p class="Texto">Esta es la primera solapa que se presenta y te ofrece el  próximo número de asiento a ingresar,   la fecha del día en los campos &quot;Fecha&quot; y &quot;Fecha de valorización&quot; y el tipo &quot;Normal&quot;.</p>
   <p class="Texto"><img class="imgreports" src="../assets/images/accountingentries07.jpg"/></p>
   <p class="Texto">Los datos  en esta solapa son:</p>
   <p class="Texto">
-    <content class="palabranegrita">Fecha de valorización</content>: te ofrece la fecha del día, es la que se utiliza si alguna de las cuentas del asiento tiene que ajustarse.
+    <content class="palabranegrita">Fecha de valorización</content>: es la que se tiene en cuenta para los ajustes si alguna de las cuentas del asiento tiene que ajustarse.
   </p>
   <p class="Texto">
     <content class="palabranegrita">Tipo</content>: te ofrece el tipo &quot;Normal&quot; que es el que mas vas a usar pero, para determinadas tareas, podes seleccionar alguno de los disponibles:
@@ -79,14 +79,27 @@
   <h3 class="Titulo3">Solapa Cuentas</h3>
   <p class="Texto">En esta solapa tenés que ingresar, una a una, las cuentas a imputar en el asiento.</p>
   <p class="Texto"><img class="imgreports" src="../assets/images/accountingentries08.jpg"/></p>
-  <p class="Texto">Si la cuenta que informas requiere centro de costos lo seleccionás a la derecha de la misma.</p>
-  <p class="Texto">Ingresá el importe de la línea al debe o al haber y  si es necesario un texto aclaratorio, luego  presioná &quot;Agregar&quot;.</p>
+  <p class="Texto">Si la cuenta que informás requiere centro de costos lo seleccionás a la derecha de la misma.</p>
+  <p class="Texto">Si la cuenta tiene asociada una tabla de cotizaciones se habilitan los campos &quot;Monto&quot; (importe en la moneda extranjera correspondiente )y &quot;Cotización&quot;.</p>
+  <p class="Texto"><img class="imgreports" src="../assets/images/accountingentries18.jpg"/></p>
+  <p class="Texto">Ingresá el importe de la línea (pase) al debe o al haber y  si es necesario un texto aclaratorio.</p>
+  <p class="Texto">En caso que la cuenta maneje moneda extranjera (tenga asociada una tabla de cotizaciones) y el tipo de asiento no sea &quot;Ajuste&quot;, al ingresar el importe, se calcula el &quot;Monto&quot; (importe en la moneda extranjera) en base a la cotización registrada en la tabla correspondiente a dicha moneda.</p>
+  <p class="Texto">Dicha cotización corresponde al valor registrado en la tabla de cotizaciones a la fecha de valorización del asiento o a la fecha anterior más cercana a la misma.</p>
+  <p class="Texto">Podes corregir los valores calculados por el sistema. Si modificás el monto, se recalcula la cotización y, análogamente, si modificás la cotización se recalcula el monto.</p>
+  <p class="Texto">Si la tabla asociada a la cuenta tiene indicado en el campo &quot;Actualización&quot;:</p>
+  <ul class="Texto_con_vinetas">
+    <li class="Texto">Confirma: En ese caso,  si no existe una cotización para la fecha de valorización del asiento , o si existe pero es diferente a la ingresada, si contestás &quot;Si&quot; se actualiza la tabla con la cotización del pase.</li>
+    <li class="Texto">Si: En este caso se actualiza automáticamente la tabla. Si ya existiese una cotización para la fecha de valorización, la cotización registrada en la tabla es reemplazada por la del asiento.</li>
+    <li class="Texto">No:  En este caso no se actualiza la tabla.</li>
+  </ul>
+  <p class="Texto">Una vez que ingresaste los datos  presioná &quot;Agregar&quot;.</p>
   <p class="Texto">Tu primer línea del asiento está ingresada y de igual manera, deberás ingresar las restantes.</p>
   <p class="Texto"><img class="imgreports" src="../assets/images/accountingentries09.jpg"/></p>
-  <p class="Texto"> Observá que EasySoft controla que el asiento balancee y no podrás guardarlo hasta tanto el debe y el haber coincidan. </p>
+  <p class="Texto">Observá que EasySoft controla que el asiento balancee y no podrás guardarlo hasta tanto el debe y el haber coincidan. </p>
   <p class="Texto">Al completar el asiento ya estás en condiciones de guardarlo.</p>
   <p class="Texto"><img class="imgreports" src="../assets/images/accountingentries10.jpg"/></p>
-  <p class="Texto">En caso que el número de asiento que estás ingresando ya exista, veras un aviso que te lo informa y te sugiere el número siguiente al último registrado.</p>
+  <p class="Texto">En caso que el número de asiento que estás ingresando ya exista, verás un aviso que te lo informa y te sugiere el número siguiente al último registrado.</p>
+  <p class="Texto"></p>
   <p class="Texto"><img class="imageProductSmall" src="../assets/images/accountingentries17.jpg"/></p>
   <h2 class="Titulo2">Modificación y eliminación de asientos</h2>
   <p class="Texto">Tanto para modificar como para eliminar un asiento ubicate sobre la línea del mismo. Para eliminarlo presioná <img src="../assets/images/eliminateicon.jpg"/>y para modificarlo en la línea del mismo y presioná <img src="../assets/images/iconpen.PNG"/>.</p>
@@ -107,6 +120,9 @@
     <li>
       <p class="Texto"><a href="costcenteraddupdate.html">Centros de costos</a></p>
     </li>
+    <li>
+      <p class="Texto"><a href="indexandquotes.html">Indices y cotizaciones</a></p>
+    </li>
   </ul>
   <p class="anotaciones"></p>
 
@@ -119,7 +135,7 @@
   </main>
   <footer role="contentinfo" class="RH-LAYOUT-FOOTER-container" id="rh-footer">
   <p class="Texto"></p>
-  <p class="Texto_footer"><span>Exacta EasySoft</span><span><span> </span>v:</span><span>1.0.0.0 - 13/02/2025</span><span><span> </span>-<span> </span></span><a b-m6d9gdqkaz="" href="https://bas.com.ar/" target="self">Powered by<span> </span><img b-m6d9gdqkaz="" height="15" src="../assets/images/favicon.ico" width="14"/></a><span><span> </span>-<span> </span></span><a b-m6d9gdqkaz="" href="https://bas.com.ar/terminos-y-condiciones" target="self">Términos y condiciones.</a></p>
+  <p class="Texto_footer"><span>Exacta EasySoft</span><span><span> </span>v:</span><span>1.0.0.0 - 18/02/2025</span><span><span> </span>-<span> </span></span><a b-m6d9gdqkaz="" href="https://bas.com.ar/" target="self">Powered by<span> </span><img b-m6d9gdqkaz="" height="15" src="../assets/images/favicon.ico" width="14"/></a><span><span> </span>-<span> </span></span><a b-m6d9gdqkaz="" href="https://bas.com.ar/terminos-y-condiciones" target="self">Términos y condiciones.</a></p>
   <p class="Texto"></p>
   <p></p>
 

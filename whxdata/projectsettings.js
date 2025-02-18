@@ -7,7 +7,7 @@ rh._.exports(defaultTopic);
 rh.consts('DEFAULT_TOPIC', encodeURI("html/your_Easysoft_world.htm"));
 rh.consts('HOME_FILEPATH', encodeURI('index.htm'));
 rh.consts('START_FILEPATH', encodeURI('index.htm'));
-rh.consts('HELP_ID', 'ef3da5db-6238-4658-b646-14bfb779f69f' || 'preview');
+rh.consts('HELP_ID', 'f620b59a-4336-419f-897a-22b190da243d' || 'preview');
 rh.consts('LNG_SUBSTR_SEARCH', 0);
 
 model.publish(rh.consts('KEY_LNG_NAME'), "es");
