@@ -1,1 +1,1 @@
-rh._.exports({"0":[[" ","Tu mundo Easysoft"]],"1":[[" ","Desde tu perfil de usuario tenes acceso a todo lo relacionado con Easysoft."," ","Podés ingresar tus datos personales, consultar tus consumos, acceder al Centro de Gestión BASWeb (CGBAS) y al Centro de ayuda."," ","Perfil:"," ","Centro de gestión:"," ","Centro de ayuda:"]],"2":[[" ","Tu mundo EasySoft"]],"id":"4"})
+rh._.exports({"0":[[" ","Actualizar indice o cotizacion"]],"2":[[" ","Actualizar indice o cotizacion"]],"id":"4"})
