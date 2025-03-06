@@ -139,7 +139,7 @@
   </div>
   <p class="Texto"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down32" href="#"><span data-open-text="true" data-skip-index="true">¿Qué pasa si para la fecha de valorización de un asiento que incluye cuentas ajustables no se ha definido un índice (o cotización)?</span><span data-close-text="true">¿Qué pasa si para la fecha de valorización de un asiento que incluye cuentas ajustables no se ha definido un índice (o cotización)?</span></a></p>
   <div class="droptext" data-targetname="drop-down32">
-    <p class="Texto">En ese caso EasySoft busca el índice o cotización registrado a la fecha anterior más cercana (la inmediata anterior mas próxima) a la de valorización del asiento y utiliza el índice o cotización informado en dicha fecha para realizar el ajuste.<br/></p>
+    <p class="Texto">En ese caso EasySoft busca el índice o cotización registrado a la fecha anterior más cercana (la inmediata anterior mas próxima) a la de valorización del asiento y utiliza el índice o cotización informado en dicha fecha para realizar el ajuste.</p>
   </div>
   <p class="Texto"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down33" href="#"><span data-open-text="true" data-skip-index="true">¿Cuándo se deben realizar los asientos de ajuste?</span><span data-close-text="true">¿Cuándo se deben realizar los asientos de ajuste?</span></a></p>
   <div class="droptext" data-targetname="drop-down33">
@@ -160,25 +160,72 @@
   <p class="Texto"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down37" href="#"><span data-open-text="true" data-skip-index="true">¿Cómo cargar los valores en las tablas de índices y cotizaciones?</span><span data-close-text="true">¿Cómo cargar los valores en las tablas de índices y cotizaciones?</span></a></p>
   <div class="droptext" data-targetname="drop-down37">
     <p class="Texto">Sólo vas a tener que cargar las fechas en las que se modifican las cotizaciones. Si, por ejemplo, la cotización de la moneda el 2/03/2024 es 1.100 y no varía hasta el 15/04/2024, bastará con cargar la cotización correspondiente a esta última fecha.</p>
+    <p class="Texto">En el caso de los indices, tenés que cargarlos en el primer día de cada mes, independientemente de la fecha del mes en la cual se publican.</p>
   </div>
   <p class="Texto"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down38" href="#"><span data-open-text="true" data-skip-index="true">¿Cómo calcula EasySoft los asientos de ajuste por índice?</span><span data-close-text="true">¿Cómo calcula EasySoft los asientos de ajuste por índice?</span></a> </p>
   <div class="droptext" data-targetname="drop-down38">
-    <p class="Texto">Si bien los asientos de ajuste podés cargarlos manualmente, lo recomendable es que los generes mediante el proceso de generación automática.<br/>
-      El proceso calcula la diferencia entre los saldos históricos y los ajustados generando el asiento utilizando las cuentas de ajuste deudora y acreedora correspondientes<br/>
-      Acá te mostramos un ejemplo de cálculo de ajuste por inflación y del asiento resultante:</p>
-    <p class="Texto">Para el ejemplo vamos a usar los siguientes índices:</p>
-    <p class="Texto"><img class="imgreports" src="../assets/images/indexAndQuote06.jpg"/></p>
-    <p class="Texto">Y vamos a ajustar el siguiente asiento:</p>
-    <p class="Texto"><img class="imgreports" src="../assets/images/frecuentanswer01.jpg"/></p>
-    <p class="Texto">El ajuste al 31/10/24 resulta del siguiente calculo:</p>
-    <p class="Texto"><br/>
-      Ajuste = Importe de la cuenta * Índice a la fecha de valorización / Índice a la fecha de valorización del asiento.</p>
-    <p class="Texto"><br/>
-      En el ejemplo resulta:<br/>
-      Ajuste=  5000* 371,14 /351.05 =  5286,14<br/>
-       </p>
-    <p class="Texto">Por lo cual el asiento de ajuste resulta en:</p>
-    <p class="Texto"><img class="imgreports" src="../assets/images/frecuentanswer02.jpg"/></p>
+    <p class="Texto">El ajuste de un asiento por índice a una fecha de ajuste se calcula como:</p>
+    <p class="recuadrado">Importe del asiento x Índice a la fecha de ajuste / Indice a la fecha de valorización                                                       -         Importe del asiento </p>
+    <p class="Texto">El asiento de ajuste por índice a una fecha de ajuste se calcula de la siguiente manera:</p>
+    <p class="recuadrado">Se ajustan todos los asientos desde el inicio de ejercicio a la fecha de ajuste y se restan todos los asientos de ajuste anteriores</p>
+    <p class="Texto">
+      <content class="palabranegrita">
+        <content class="palabranegrita">
+          <content class="palabranegrita">
+            <content class="subrayado">
+              <content class="subrayado">
+                <content class="subrayado">
+                  <content class="subrayadonegrita">
+                    <content class="subrayadonegrita">
+                      <content class="subrayadonegrita">Detalle del cálculo:</content>
+                    </content>
+                  </content>
+                </content>
+              </content>
+            </content>
+          </content>
+        </content>
+      </content>
+    </p>
+    <p class="Texto">Para todos los asientos que se ajustan:</p>
+    <p class="recuadrado">Se toma la siguiente sumatoria:<br/>   [Importe del asiento x Índice a la fecha de ajuste / Indice a la fecha de valorización                                             -     Importe del asiento]<br/>Y se restan:<br/>    Los asientos de ajuste anteriores</p>
+  </div>
+  <p class="Texto"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down39" href="#"><span data-open-text="true" data-skip-index="true">¿Cómo calcula EasySoft los asientos de ajuste por cotización?</span><span data-close-text="true">¿Cómo calcula EasySoft los asientos de ajuste por cotización?</span></a> </p>
+  <div class="droptext" data-targetname="drop-down39">
+    <p class="Texto">El ajuste de un asiento por cotización a una fecha de ajuste se calcula como:</p>
+    <p class="recuadrado">Monto del asiento x cotización a la fecha de ajuste                                                                                                                           -     Monto del asiento x cotización a la fecha de valorización del asiento</p>
+    <p class="Texto">El asiento de ajuste por cotización a una fecha de ajuste se calcula de la siguiente manera:</p>
+    <p class="recuadrado">
+      <content class="palabranegrita">
+        <content class="palabranegrita">
+          <content class="palabranegrita">
+            <content class="palabrasinegrita">
+              <content class="palabrasinegrita">
+                <content class="palabrasinegrita">Se ajustan todos los asientos desde el inicio de ejercicio a la fecha de ajuste y se restan todos los asientos de ajuste anteriores.</content>
+              </content>
+            </content>
+          </content>
+        </content>
+      </content>
+    </p>
+    <p class="Texto">
+      <content class="subrayado">
+        <content class="subrayado">
+          <content class="subrayado">
+            <content class="subrayadonegrita">
+              <content class="subrayadonegrita">
+                <content class="subrayadonegrita">Detalle del cálculo:</content>
+              </content>
+            </content>
+          </content>
+        </content>
+      </content>
+    </p>
+    <p class="Texto">Para todos los asientos que se ajustan:</p>
+    <p class="recuadrado">Se toma la siguiente sumatoria:<br/>
+          [Monto x cotización (a la fecha de ajuste) – Monto x cotización (a la fecha de valorización) ]<br/>
+      y se restan:<br/>
+          Los asientos de ajuste anteriores</p>
   </div>
   <p class="Texto"></p>
 
@@ -191,7 +238,7 @@
   </main>
   <footer role="contentinfo" class="RH-LAYOUT-FOOTER-container" id="rh-footer">
   <p class="Texto"></p>
-  <p class="Texto_footer"><span>Exacta EasySoft</span><span><span> </span>v:</span><span>1.0.0.0 - 20/02/2025</span><span><span> </span>-<span> </span></span><a b-m6d9gdqkaz="" href="https://bas.com.ar/" target="self">Powered by<span> </span><img b-m6d9gdqkaz="" height="15" src="../assets/images/favicon.ico" width="14"/></a><span><span> </span>-<span> </span></span><a b-m6d9gdqkaz="" href="https://bas.com.ar/terminos-y-condiciones" target="self">Términos y condiciones.</a></p>
+  <p class="Texto_footer"><span>Exacta EasySoft</span><span><span> </span>v:</span><span>1.0.0.0 - 06/03/2025</span><span><span> </span>-<span> </span></span><a b-m6d9gdqkaz="" href="https://bas.com.ar/" target="self">Powered by<span> </span><img b-m6d9gdqkaz="" height="15" src="../assets/images/favicon.ico" width="14"/></a><span><span> </span>-<span> </span></span><a b-m6d9gdqkaz="" href="https://bas.com.ar/terminos-y-condiciones" target="self">Términos y condiciones.</a></p>
   <p class="Texto"></p>
   <p></p>
 
