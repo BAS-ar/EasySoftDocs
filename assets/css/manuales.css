@@ -237,3 +237,20 @@
   text-decoration: underline;
   font-size: 1rem;
 }
+.RH-LAYOUT-CENTERPANEL-topic-box img.imgReportsL, .RH-LAYOUT-FOOTER-container img.imgReportsL, .RH-LAYOUT-HOMEPAGE-FOOTER-container img.imgReportsL {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-left-color: #808080;
+  border-top-color: #808080;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+}
