@@ -23,8 +23,8 @@
   color: #6574CD;
   text-align: left;
   font-weight: 600;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 .RH-LAYOUT-CENTERPANEL-topic-box h3.Titulo3, .RH-LAYOUT-FOOTER-container h3.Titulo3, .RH-LAYOUT-HOMEPAGE-FOOTER-container h3.Titulo3 {
   font-family: 'IBM Plex Sans';
@@ -206,4 +206,34 @@
   border-top-width: 1px;
   border-right-width: 1px;
   border-bottom-width: 1px;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box content.subrayado, .RH-LAYOUT-FOOTER-container content.subrayado, .RH-LAYOUT-HOMEPAGE-FOOTER-container content.subrayado {
+  font-family: 'IBM Plex Sans';
+  font-weight: normal;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box p.recuadrado, .RH-LAYOUT-FOOTER-container p.recuadrado, .RH-LAYOUT-HOMEPAGE-FOOTER-container p.recuadrado {
+  border-left-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-color: #000000;
+  border-top-color: #000000;
+  border-right-color: #000000;
+  border-bottom-color: #000000;
+  border-left-width: 0.5px;
+  border-top-width: 0.5px;
+  border-right-width: 0.5px;
+  border-bottom-width: 0.5px;
+  font-family: 'IBM Plex Sans';
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: left;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box content.subrayadonegrita, .RH-LAYOUT-FOOTER-container content.subrayadonegrita, .RH-LAYOUT-HOMEPAGE-FOOTER-container content.subrayadonegrita {
+  font-family: 'IBM Plex Sans';
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1rem;
 }
