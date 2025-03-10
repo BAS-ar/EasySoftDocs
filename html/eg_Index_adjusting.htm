@@ -14,7 +14,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="generator" content="Adobe RoboHelp 2022"/>
-  <title>Ejemplo ajuste por cotizacion</title>
+  <title>Ejemplo ajuste por indices</title>
   <meta name="topic-status" content="Draft"/>
   <link rel="stylesheet" type="text/css" href="../assets/css/manuales.css"/>
 <meta name="rh-version" content="2022.4.179"/>
@@ -46,57 +46,51 @@
         <div class="RH-LAYOUT-CENTERPANEL-container">
           <div class="rh-layout-selectdetails" id="rh-selectdetails"></div>
           <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
-  <h1 class="Titulo1">Ejemplo ajuste por cotización</h1>
-  <p class="Texto">El ejemplo se desarrolla con cuentas de ajuste en dólares, teniendo en cuenta las siguientes cotizaciones:<br/>
-    <img class="imgreports" src="../assets/images/egEx01.jpg"/>
-  </p>
+  <h1 class="Titulo1">Ejemplo de ajuste por índice</h1>
+  <p class="Texto">El ejemplo se desarrolla con cuentas de ajuste en dólares, teniendo en cuenta las siguientes cotizaciones:</p>
+  <p class="Texto"><img class="imgReportsL" src="../assets/images/egIn01.jpg" style="cursor: nwse-resize;"/></p>
   <p class="Texto">Se utilizan  las siguientes cuentas:</p>
   <ul class="Texto_con_vinetas">
-    <li class="Texto">Cuenta 1003-Dólares en efectivo</li>
+    <li class="Texto">Cuenta 1004-Gastos Generales</li>
   </ul>
-  <p class="Texto">                Tabla de ajuste: 5-Cotización del dolar</p>
-  <p class="Texto">                Cta. de ajuste deudora: 1002-Resultado por tenencia</p>
-  <p class="Texto">                Cta. de ajuste acreedora: 1002-Resultado por tenencia</p>
+  <p class="Texto">                Tabla de ajuste: 1-Indice de precios al consumidor (IPC)</p>
+  <p class="Texto">                Cta. de ajuste deudora: 1001-Resultado por exposición a la inflación</p>
+  <p class="Texto">                Cta. de ajuste acreedora: 1001-Resultado por exposición a la inflación</p>
   <ul class="Texto_con_vinetas">
-    <li class="Texto">Cuenta 1002-Resultado por tenencia</li>
+    <li class="Texto">Cuenta 1001-Resultado por exposición a la inflación</li>
   </ul>
   <p class="Texto"><br/>
-    El dia 04/01/24 se compran dólares según se muestra:</p>
-  <p class="Texto"><img class="imgReportsL" src="../assets/images/egEx02.jpg"/></p>
-  <p class="Texto">Se genera un asiento de ajuste por cotización al 28/02/24:</p>
-  <p class="Texto"><img class="imgReportsL" src="../assets/images/egEx03.jpg"/></p>
+    El dia 02/01/24 se pagan gastos según se muestra:</p>
+  <p class="Texto"><img class="imgReportsL" src="../assets/images/egIn02.jpg"/></p>
+  <p class="Texto">Se genera un asiento de ajuste por índice al 28/02/2024:</p>
+  <p class="Texto"><img class="imgReportsL" src="../assets/images/egIn03.jpg"/></p>
+  <p class="Texto">Indice al 28/02/2024: 300</p>
   <p class="Texto">El importe resulta del siguiente cálculo:</p>
-  <p class="Texto">      Valor ajustado= 500 U$S x 1.300= $650.000 </p>
-  <p class="Texto">      Valor original: 500 U$S x 1.100 = $550.000</p>
-  <p class="Texto">      Valor ajustado – Valor original= $100.000   (Como se muestra en el asiento anterior)</p>
+  <p class="Texto">      Valor ajustado= $10.000 x 300/200 = $15.000</p>
+  <p class="Texto">      Valor original: $10.000</p>
+  <p class="Texto">      Valor ajustado – Valor original= $5.000   (Como se muestra en el asiento anterior)</p>
   <p class="Texto"></p>
-  <p class="Texto">El día 02/02/24 se compran dólares según se muestra:</p>
-  <p class="Texto"><img class="imgReportsL" src="../assets/images/egEx04.jpg"/></p>
-  <p class="Texto"></p>
-  <p class="Texto">Se genera un asiento de ajuste por cotización al 31/03/24:</p>
-  <p class="Texto"><img class="imgReportsL" src="../assets/images/egEx05.jpg"/></p>
+  <p class="Texto">El día 12/02/2024 se pagan gastos según se muestra:</p>
+  <p class="Texto"><img class="imgReportsL" src="../assets/images/egIn04.jpg"/></p>
+  <p class="Texto">Se genera un asiento de ajuste por índice al 31/03/2024:</p>
+  <p class="Texto"><img class="imgReportsL" src="../assets/images/egIn05.jpg"/></p>
+  <p class="Texto">Indice al 31/03/2024: 400</p>
   <p class="Texto">El importe resulta del siguiente cálculo:</p>
-  <p class="Texto">    Asiento del 04/01 ajustado = 500 U$S x 1.400 – 500 U$S x 1.100 =$ 150.000</p>
-  <p class="Texto">    Asiento del 02/02 ajustado = 300U$S x 1.400 – 300U$S x 1.200 =     $ 60.000</p>
-  <p class="Texto">    Valor ajustado = $ 210.000</p>
-  <p class="Texto">    Valor ajustado - Asiento de ajuste anterior =  $210.000 - $100.000 = $ 110.000  (Como se muestra en      el asiento anterior)</p>
+  <p class="Texto">   Asiento del 2/01/2024 ajustado: $10.000 x 400/ 200 - $10.000 = $10.000</p>
+  <p class="Texto">   Asiento del 12/02/2024 ajustado: $15.000 x 400/300 - $15.000 = $ 5.000</p>
+  <p class="Texto">   Suma de los 2 asientos ajustados - Ajuste anterior = $15.000 - $5.000= $10.000 ( Como se muestra en     el asiento anterior)</p>
   <p class="Texto"></p>
-  <p class="Texto">El dia 03/03/24 se compran dólares según se muestra:</p>
-  <p class="Texto"></p>
-  <p class="Texto"><img class="imgReportsL" src="../assets/images/egEx06.jpg"/></p>
-  <p class="Texto">    </p>
-  <p class="Texto">Se genera un asiento de ajuste por cotización al 30/04/24:</p>
-  <p class="Texto"><img class="imgReportsL" src="../assets/images/egEx07.jpg"/></p>
+  <p class="Texto">El día 05/03/2024 se pagan gastos según se muestra:</p>
+  <p class="Texto"><img class="imgReportsL" src="../assets/images/egIn06.jpg"/></p>
+  <p class="Texto">Se genera un asiento de ajuste por índice al 30/04/2024:</p>
+  <p class="Texto"><img class="imgReportsL" src="../assets/images/egIn07.jpg"/></p>
+  <p class="Texto">Indice al 30/04/2024: 500</p>
   <p class="Texto">El importe resulta del siguiente cálculo:</p>
-  <p class="Texto">     Asiento del 04/01 ajustado = 500 U$S x 1.500 – 500 U$S x 1.100 =$ 200.000</p>
-  <p class="Texto">    Asiento del 02/02 ajustado = 300U$S x 1.500 – 300U$S x 1.200 =     $ 90.000</p>
-  <p class="Texto">    Asiento del 03/03 ajustado = 600U$S x 1.500 – 600U$S x 1.400 =     $ 60.000</p>
-  <p class="Texto">    Valor ajustado = $ 350.000</p>
-  <p class="Texto">    Valor ajustado - Asientos de ajuste anteriores =  $350.000 - $100.000  - $ 110.000= $ 140.000  (Como se muestra en el asiento anterior)</p>
+  <p class="Texto">   Asiento del 2/01/2024 ajustado: $10.000 x 500/ 200 - $10.000 =  $15.000</p>
+  <p class="Texto">   Asiento del 12/02/2024 ajustado: $15.000 x 500/300 - $15.000 = $ 10.000</p>
+  <p class="Texto">   Asiento del 05/03/2024 ajustado: $25.000 x 500/400 - $25.000 =    $6.250</p>
+  <p class="Texto">   Suma de los 3 asientos ajustados - Ajustes anteriores = $31.250 - $5.000 - $ 10.000 = $16.250 ( Como     se muestra en el asiento anterior)</p>
   <p class="Texto"></p>
-  <p class="Texto"></p>
-  <p class="Texto"></p>
-  <p></p>
   <p class="Texto"></p>
   <p class="Texto"></p>
 
@@ -118,7 +112,7 @@
 
     gRootRelPath = ".."
     gCommonRootRelPath = ".."
-    gTopicId = "0_7"
+    gTopicId = "0_8"
   
 //]]></script>
 
