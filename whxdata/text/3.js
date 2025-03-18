@@ -1,1 +1,1 @@
-rh._.exports({"0":[[" ","Actualizar indice o cotizacion"]],"2":[[" ","Actualizar indice o cotizacion"]],"id":"3"})
+rh._.exports({"0":[[" ","VerModifVistas"]],"id":"3"})
