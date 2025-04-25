@@ -1,1 +1,1 @@
-rh._.exports({"0":[[" ","AnoFiscalModif"]],"id":"6"})
+rh._.exports({"0":[[" ","Actualizar indice o cotizacion"]],"id":"6"})
