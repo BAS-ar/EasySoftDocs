@@ -3,10 +3,14 @@
   <contextmap>
     
   </contextmap>
-  <topiclist defaulttopic="html\your_Easysoft_world.htm">
+  <topiclist defaulttopic="html\user_profile.htm">
     
     <topic>
-      html\your_Easysoft_world.htm
+      html\user_profile.htm
+    </topic>
+    
+    <topic>
+      html\first_steps.htm
     </topic>
     
     <topic>

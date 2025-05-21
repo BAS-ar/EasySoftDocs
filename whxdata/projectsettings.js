@@ -2,12 +2,12 @@
 (function() {
 rh = window.rh;
 model = rh.model;
-var defaultTopic = "html/your_Easysoft_world.htm";
+var defaultTopic = "html/user_profile.htm";
 rh._.exports(defaultTopic);
-rh.consts('DEFAULT_TOPIC', encodeURI("html/your_Easysoft_world.htm"));
+rh.consts('DEFAULT_TOPIC', encodeURI("html/user_profile.htm"));
 rh.consts('HOME_FILEPATH', encodeURI('index.htm'));
 rh.consts('START_FILEPATH', encodeURI('index.htm'));
-rh.consts('HELP_ID', '1edc2beb-63bd-4e13-a081-f0bdff411df1' || 'preview');
+rh.consts('HELP_ID', 'da3f983d-960e-48f6-ba20-e98b9bf9e2d5' || 'preview');
 rh.consts('LNG_SUBSTR_SEARCH', 0);
 
 model.publish(rh.consts('KEY_LNG_NAME'), "es");
