@@ -161,6 +161,15 @@
   font-family: 'IBM Plex Sans';
   font-weight: bold;
 }
+.RH-LAYOUT-CENTERPANEL-topic-box p.texto_subitem_sin_vin, .RH-LAYOUT-FOOTER-container p.texto_subitem_sin_vin, .RH-LAYOUT-HOMEPAGE-FOOTER-container p.texto_subitem_sin_vin {
+  font-family: 'IBM Plex Sans';
+  font-weight: normal;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
 .RH-LAYOUT-CENTERPANEL-topic-box content.palabranegrita, .RH-LAYOUT-FOOTER-container content.palabranegrita, .RH-LAYOUT-HOMEPAGE-FOOTER-container content.palabranegrita {
   font-weight: bold;
   font-family: 'IBM Plex Sans';
