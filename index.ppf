@@ -14,10 +14,6 @@
     </topic>
     
     <topic>
-      html\notifications.htm
-    </topic>
-    
-    <topic>
       html\Ingreso_al_sistema.html
     </topic>
     
@@ -135,6 +131,10 @@
     
     <topic>
       html\views.html
+    </topic>
+    
+    <topic>
+      html\notifications.htm
     </topic>
     
     <topic>
