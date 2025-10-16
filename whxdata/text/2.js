@@ -1,1 +1,1 @@
-rh._.exports({"0":[[" ","Actualizar indice o cotizacion"]],"id":"2"})
+rh._.exports({"0":[[" ","Alta de centro de costos"]],"id":"2"})
