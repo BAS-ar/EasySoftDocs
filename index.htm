@@ -62,7 +62,7 @@
   <script type="text/javascript" src="template/scripts/homepage.js" charset="utf-8"></script>
   <script src="whxdata/layoutconfig.js"></script>
   
- <script src="https://intranetqa.bas.com.ar/chatbotia/chatbot-widget.js"></script>
+ <script src="chatbot-widget.js"></script>
 
 <script type="text/javascript" id="zsiqchat">
 var $zoho=$zoho || {};
@@ -70,13 +70,36 @@ $zoho.salesiq = $zoho.salesiq || {
     widgetcode: "siqb25b943eaf1f92c7ed086df7176833fd70631f401d4249c45a91bf30aa6ab02f", 
     values:{},
     ready:function(){
-        console.log('SalesIQ widget precargado');
+        console.log('✅ SalesIQ widget cargado');
         $zoho.salesiq.chat.department("Soporte y Consultoría");
         $zoho.salesiq.visitor.name("Derivado por EasyIA");
         $zoho.salesiq.visitor.email("soportetecnicolen@bas.com.ar");
+        
+        // Agregar manejador para cuando el chat se completa
+        $zoho.salesiq.chat.complete(function(visitid, data){
+            console.log('✅ Chat SalesIQ finalizado - Regresando a chatbot IA', visitid);
+            
+            // Ocultar SalesIQ
+            if (typeof $zoho.salesiq.floatwindow.minimize === 'function') {
+                $zoho.salesiq.floatwindow.minimize();
+                $zoho.salesiq.floatbutton.visible("hide");  
+            }
+            
+            // Restaurar widget de IA
+            if (window.restoreChatbotWidget) {
+                window.restoreChatbotWidget();
+            }
+            
+            // Agregar mensaje de transición en el chat
+            if (window.addTransitionMessage) {
+                window.addTransitionMessage();
+            }
+        });
     }
 };
-</script> 
+
+</script>
+ 
 
   
 
