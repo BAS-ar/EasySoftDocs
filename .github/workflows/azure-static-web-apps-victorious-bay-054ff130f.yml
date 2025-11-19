@@ -16,7 +16,7 @@ jobs:
     name: Build and Deploy Job
     
     permissions:
-      contents: read 
+      contents: read # Solo se necesita para leer el código fuente
       
     steps:
       - uses: actions/checkout@v3
@@ -24,26 +24,34 @@ jobs:
           submodules: true
           lfs: false
       
-      - name: Deploy Static HTML App (CAES) - Forzando Ubicación
+      # 🛑 PASO CRÍTICO: Crea una copia temporal de index.htm como index.html
+      - name: Create index.html for SWA action
+        run: |
+          # Si existe index.htm y no existe index.html, lo copia
+          if [ -f "index.htm" ] && [ ! -f "index.html" ]; then
+            cp index.htm index.html
+          fi
+      
+      - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          # CRÍTICO: Usa el secreto de despliegue generado para la nueva SWA (CAES)
-          # Reemplaza <TU_NUEVO_SECRETO_LARGO> por el nombre real del secreto en GitHub.
+          # CRÍTICO: Usa el secreto de tu nuevo SWA (CAES)
+          # Asegúrate de usar el nombre EXACTO de tu secreto en GitHub
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_BAY_054FF130F }} 
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           
           # Configuración para archivos estáticos en la raíz
           app_location: "/"
-          api_location: "false" 
-          output_location: "/" 
+          api_location: "false"
+          output_location: "/"
           
-          # 🛑 NUEVA LÍNEA CLAVE: Asegura que el directorio a subir es la raíz
-          app_artifact_location: "/" 
+          # Deshabilitar la compilación de Oryx
+          skip_app_build: true
           
-          # Omite la compilación
-          skip_app_build: true 
+          # El parámetro github_id_token NO es necesario si no usas OIDC
+          # La acción lo omitirá si no se proporciona.
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
