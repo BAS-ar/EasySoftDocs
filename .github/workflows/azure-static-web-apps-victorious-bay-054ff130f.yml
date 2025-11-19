@@ -16,7 +16,7 @@ jobs:
     name: Build and Deploy Job
     
     permissions:
-      contents: read # Solo se necesita para leer el código fuente
+      contents: read 
       
     steps:
       - uses: actions/checkout@v3
@@ -24,34 +24,38 @@ jobs:
           submodules: true
           lfs: false
       
-      # 🛑 PASO CRÍTICO: Crea una copia temporal de index.htm como index.html
-      - name: Create index.html for SWA action
+      # 🛑 PASO DE COPIA Y VERIFICACIÓN: Forzamos la creación de index.html
+      - name: Force copy index.htm to index.html and verify
         run: |
-          # Si existe index.htm y no existe index.html, lo copia
-          if [ -f "index.htm" ] && [ ! -f "index.html" ]; then
-            cp index.htm index.html
-          fi
+          echo "1. Buscando archivos .htm en el directorio raíz (el nombre debe ser exacto, e.g., index.htm, Index.HTM):"
+          # El comando 'find' nos revelará el nombre exacto del archivo en el disco del runner (Linux)
+          find . -maxdepth 1 -name "*.htm"
+          
+          echo "2. Ejecutando la copia incondicional:"
+          # Intentamos copiar. Si el nombre del archivo es incorrecto (e.g., Index.HTM), este comando fallará.
+          cp index.htm index.html
+          echo "Copia de index.htm a index.html completada (o fallida, revisar logs de cp)."
       
+      # 🔍 PASO DE DEBUG: Muestra la lista de archivos para confirmar index.html
+      - name: List files and check copy
+        run: |
+          echo "3. Listando archivos en el directorio de trabajo:"
+          ls -l -a
+        
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          # CRÍTICO: Usa el secreto de tu nuevo SWA (CAES)
-          # Asegúrate de usar el nombre EXACTO de tu secreto en GitHub
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_BAY_054FF130F }} 
+          # CRÍTICO: Secreto de tu SWA CAES (VICTORIOUS_BAY)
+          # Si este secreto es incorrecto, el error cambiará a "invalid API token". 
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_BAY_054FF130F }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           
-          # Configuración para archivos estáticos en la raíz
           app_location: "/"
           api_location: "false"
           output_location: "/"
-          
-          # Deshabilitar la compilación de Oryx
           skip_app_build: true
-          
-          # El parámetro github_id_token NO es necesario si no usas OIDC
-          # La acción lo omitirá si no se proporciona.
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
