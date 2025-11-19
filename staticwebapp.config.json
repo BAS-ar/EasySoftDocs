@@ -1,0 +1,10 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.htm"
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.htm"
+    }
+  }
+}
