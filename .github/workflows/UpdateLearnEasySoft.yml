@@ -1,1 +1,13 @@
-pipeline
+# Workflow - Azure Delivery LearnEasySoft
+#
+name: Azure Delivery LearnEasySoft
+
+run-name: ${{ github.actor }} Azure Delivery LearnEasySoft
+
+permissions: write-all
+
+on: 
+  workflow_dispatch:
+
+jobs:
+
