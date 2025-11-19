@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     
-    # 1. Configuración de Permisos Explícita (Refuerza la seguridad de la organización)
     permissions:
       contents: read 
       
@@ -25,22 +24,25 @@ jobs:
           submodules: true
           lfs: false
       
-      - name: Deploy Static HTML App (CAES)
+      - name: Deploy Static HTML App (CAES) - Forzando Ubicación
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          # 🛑 CRÍTICO: Usa el secreto de despliegue generado para la nueva SWA (CAES)
-          # Asegúrate de que el nombre aquí coincida con el secreto en GitHub.
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_<TU_NUEVO_SECRETO_LARGO> }} 
+          # CRÍTICO: Usa el secreto de despliegue generado para la nueva SWA (CAES)
+          # Reemplaza <TU_NUEVO_SECRETO_LARGO> por el nombre real del secreto en GitHub.
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_BAY_054FF130F }} 
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           
-          # 2. Configuración para HTML Estático (Archivos en la Raíz)
+          # Configuración para archivos estáticos en la raíz
           app_location: "/"
           api_location: "false" 
           output_location: "/" 
           
-          # 3. Omite la compilación (evita el error de Oryx)
+          # 🛑 NUEVA LÍNEA CLAVE: Asegura que el directorio a subir es la raíz
+          app_artifact_location: "/" 
+          
+          # Omite la compilación
           skip_app_build: true 
 
   close_pull_request_job:
@@ -48,7 +50,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Close Pull Request Job
     
-    # Configuración de Permisos Explícita para cerrar el PR
     permissions:
       pull-requests: write
       
@@ -57,6 +58,5 @@ jobs:
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
-          # Usa el secreto de despliegue generado para la nueva SWA (CAES)
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_BAY_054FF130F }}
           action: "close"
