@@ -175,7 +175,7 @@
   font-family: 'IBM Plex Sans';
 }
 .RH-LAYOUT-CENTERPANEL-topic-box content.palabrasinegrita, .RH-LAYOUT-FOOTER-container content.palabrasinegrita, .RH-LAYOUT-HOMEPAGE-FOOTER-container content.palabrasinegrita {
-  font-weight: normal;
+  font-weight: bold;
   font-family: 'IBM Plex Sans';
 }
 .RH-LAYOUT-CENTERPANEL-topic-box ul.Disc, .RH-LAYOUT-FOOTER-container ul.Disc, .RH-LAYOUT-HOMEPAGE-FOOTER-container ul.Disc {
@@ -262,4 +262,42 @@
   border-top-style: solid;
   border-right-style: solid;
   border-bottom-style: solid;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box p.textonegritasubrayado, .RH-LAYOUT-FOOTER-container p.textonegritasubrayado, .RH-LAYOUT-HOMEPAGE-FOOTER-container p.textonegritasubrayado {
+  font-family: 'IBM Plex Sans';
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box table.tabla, .RH-LAYOUT-FOOTER-container table.tabla, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla {
+  float: left;
+  border-collapse: collapse;
+  font-family: 'IBM Plex Sans';
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box table.tabla td:first-child, .RH-LAYOUT-FOOTER-container table.tabla td:first-child, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla td:first-child {
+  text-align: right;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box table.tabla tr:first-child td, .RH-LAYOUT-FOOTER-container table.tabla tr:first-child td, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla tr:first-child td {
+  font-family: 'IBM Plex Sans';
+  font-weight: bold;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box table.tabla>thead>tr, .RH-LAYOUT-FOOTER-container table.tabla>thead>tr, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla>thead>tr {
+  font-family: 'IBM Plex Sans';
+  font-weight: bold;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box table.tabla td, .RH-LAYOUT-FOOTER-container table.tabla td, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla td {
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box table.tabla th, .RH-LAYOUT-FOOTER-container table.tabla th, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla th {
+  padding-top: 10px;
+  padding-left: 5px;
 }
