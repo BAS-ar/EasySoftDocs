@@ -1,6 +1,5 @@
 name: Despliegue Manual y Sincronización con Chatbot
 
-# Este workflow solo se ejecuta manualmente desde la pestaña 'Actions'
 on:
   workflow_dispatch:
     inputs:
@@ -11,12 +10,11 @@ on:
 
 jobs:
   # ===============================================================
-  # JOB 1: DESPLIEGUE A AZURE STATIC WEB APP (tu job original)
+  # JOB 1: DESPLIEGUE A AZURE STATIC WEB APP
   # ===============================================================
   build_and_deploy_job:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
-    
     permissions:
       contents: read 
       
@@ -47,12 +45,10 @@ jobs:
           skip_app_build: true
 
   # =================================================================
-  # JOB 2: SINCRONIZACIÓN CON EL REPOSITORIO DEL CHATBOT (nuevo job)
+  # JOB 2: SINCRONIZACIÓN CON EL REPOSITORIO DEL CHATBOT
   # =================================================================
   sync_to_chatbot_repo:
-    # Este job depende del anterior: solo se ejecuta si 'build_and_deploy_job' tiene éxito
     needs: build_and_deploy_job
-    
     runs-on: ubuntu-latest
     name: Sincronizar con Repositorio del Chatbot
 
@@ -60,30 +56,29 @@ jobs:
       - name: 1. Checkout del Repositorio de Documentación (Origen)
         uses: actions/checkout@v3
         with:
-          path: source-docs # Clona el repo de docs en la carpeta 'source-docs'
+          path: source-docs
 
       - name: 2. Checkout del Repositorio del Chatbot (Destino)
         uses: actions/checkout@v3
         with:
-          repository: chatbotia_BAS/EasySoft # El repositorio de tu chatbot
-          path: target-chatbot # Clona el repo del chatbot en la carpeta 'target-chatbot'
-          token: ${{ secrets.EASYSOFT_SYNC_TOKEN }} # ¡IMPORTANTE! El secreto que creaste
+          # --- CORRECCIÓN 1: Repositorio de destino correcto ---
+          repository: BAS-ar/ChatEasySoft 
+          path: target-chatbot
+          # --- CORRECIÓN 2: Nombre del secreto correcto ---
+          token: ${{ secrets.ChatEasySoft }} 
+          ref: main                     
 
       - name: 3. Sincronizar la carpeta /html con rsync
         run: |
           echo "Sincronizando los archivos de 'source-docs/html/' a 'target-chatbot/HTML/'..."
-          # Se asegura de que la carpeta de destino HTML exista
           mkdir -p target-chatbot/HTML
-          # Sincroniza: copia archivos nuevos/modificados y borra los que ya no existen en el origen
           rsync -av --delete --exclude='.git/' source-docs/html/ target-chatbot/HTML/
         
       - name: 4. Hacer Commit y Push si hay cambios
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          repository: target-chatbot # Apunta a la carpeta del repo del chatbot
+          repository: target-chatbot
           commit_message: "chore(docs): Sincronización automática de documentación desde EasySoftDocs"
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "github-actions@github.com"
           commit_author: "GitHub Actions Bot <github-actions@github.com>"
-          # Esta acción es inteligente: solo hará un commit si detecta que rsync hizo cambios.
-
