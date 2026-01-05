@@ -67,7 +67,7 @@ jobs:
         with:
           repository: chatbotia_BAS/EasySoft # El repositorio de tu chatbot
           path: target-chatbot # Clona el repo del chatbot en la carpeta 'target-chatbot'
-          token: ${{ secrets.ChatEasySoft }} # ¡IMPORTANTE! El secreto que creaste
+          token: ${{ secrets.EASYSOFT_SYNC_TOKEN }} # ¡IMPORTANTE! El secreto que creaste
 
       - name: 3. Sincronizar la carpeta /html con rsync
         run: |
