@@ -1,15 +1,18 @@
-name: Despliegue Manual a Producción (SWA)
+name: Despliegue Manual y Sincronización con Chatbot
 
 # Este workflow solo se ejecuta manualmente desde la pestaña 'Actions'
 on:
   workflow_dispatch:
     inputs:
       reason:
-        description: 'Despliegue manual a SWA'
+        description: 'Despliegue y sincronización manual'
         required: false
-        default: 'Despliegue a producción solicitado manualmente.'
+        default: 'Despliegue a SWA y sincronización con chatbot.'
 
 jobs:
+  # ===============================================================
+  # JOB 1: DESPLIEGUE A AZURE STATIC WEB APP (tu job original)
+  # ===============================================================
   build_and_deploy_job:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
@@ -23,32 +26,64 @@ jobs:
           submodules: true
           lfs: false
       
-      # PASO DE COPIA: Esencial para que la acción SWA encuentre index.html
       - name: Force copy index.htm to index.html and verify
         run: |
-          echo "1. Buscando archivos .htm en el directorio raíz:"
-          find . -maxdepth 1 -name "*.htm"
-          echo "2. Ejecutando la copia incondicional:"
           cp index.htm index.html
           echo "Copia de index.htm a index.html completada."
-      
-      # PASO DE DEBUG: (Opcional, puedes eliminarlo si ya no lo necesitas)
+        
       - name: List files and check copy
-        run: |
-          echo "3. Listando archivos en el directorio de trabajo:"
-          ls -l -a
+        run: ls -l -a
         
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_BAY_054FF130F }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          
-          # Configuración para archivos estáticos en la raíz
           app_location: "/"
           api_location: "false"
           output_location: "/"
           skip_app_build: true
+
+  # =================================================================
+  # JOB 2: SINCRONIZACIÓN CON EL REPOSITORIO DEL CHATBOT (nuevo job)
+  # =================================================================
+  sync_to_chatbot_repo:
+    # Este job depende del anterior: solo se ejecuta si 'build_and_deploy_job' tiene éxito
+    needs: build_and_deploy_job
+    
+    runs-on: ubuntu-latest
+    name: Sincronizar con Repositorio del Chatbot
+
+    steps:
+      - name: 1. Checkout del Repositorio de Documentación (Origen)
+        uses: actions/checkout@v3
+        with:
+          path: source-docs # Clona el repo de docs en la carpeta 'source-docs'
+
+      - name: 2. Checkout del Repositorio del Chatbot (Destino)
+        uses: actions/checkout@v3
+        with:
+          repository: chatbotia_BAS/EasySoft # El repositorio de tu chatbot
+          path: target-chatbot # Clona el repo del chatbot en la carpeta 'target-chatbot'
+          token: ${{ secrets.ChatEasySoft }} # ¡IMPORTANTE! El secreto que creaste
+
+      - name: 3. Sincronizar la carpeta /html con rsync
+        run: |
+          echo "Sincronizando los archivos de 'source-docs/html/' a 'target-chatbot/HTML/'..."
+          # Se asegura de que la carpeta de destino HTML exista
+          mkdir -p target-chatbot/HTML
+          # Sincroniza: copia archivos nuevos/modificados y borra los que ya no existen en el origen
+          rsync -av --delete --exclude='.git/' source-docs/html/ target-chatbot/HTML/
+        
+      - name: 4. Hacer Commit y Push si hay cambios
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          repository: target-chatbot # Apunta a la carpeta del repo del chatbot
+          commit_message: "chore(docs): Sincronización automática de documentación desde EasySoftDocs"
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "github-actions@github.com"
+          commit_author: "GitHub Actions Bot <github-actions@github.com>"
+          # Esta acción es inteligente: solo hará un commit si detecta que rsync hizo cambios.
+
