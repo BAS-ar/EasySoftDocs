@@ -1,4 +1,4 @@
-name: Despliegue Manual y Sincronización con Chatbot
+name: Despliegue Manual y Sincronización con ChatEasySoft (SWA)
 
 on:
   workflow_dispatch:
