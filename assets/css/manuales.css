@@ -175,7 +175,7 @@
   font-family: 'IBM Plex Sans';
 }
 .RH-LAYOUT-CENTERPANEL-topic-box content.palabrasinegrita, .RH-LAYOUT-FOOTER-container content.palabrasinegrita, .RH-LAYOUT-HOMEPAGE-FOOTER-container content.palabrasinegrita {
-  font-weight: bold;
+  font-weight: normal;
   font-family: 'IBM Plex Sans';
 }
 .RH-LAYOUT-CENTERPANEL-topic-box ul.Disc, .RH-LAYOUT-FOOTER-container ul.Disc, .RH-LAYOUT-HOMEPAGE-FOOTER-container ul.Disc {
