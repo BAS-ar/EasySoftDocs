@@ -114,6 +114,34 @@
     </topic>
     
     <topic>
+      html\subjournals.html
+    </topic>
+    
+    <topic>
+      html\salessubjournallist.html
+    </topic>
+    
+    <topic>
+      html\purchasessubjournallist.html
+    </topic>
+    
+    <topic>
+      html\businesspartners.html
+    </topic>
+    
+    <topic>
+      html\documentimport.html
+    </topic>
+    
+    <topic>
+      html\views.html
+    </topic>
+    
+    <topic>
+      html\journalreport.html
+    </topic>
+    
+    <topic>
       html\balance.html
     </topic>
     
@@ -122,23 +150,7 @@
     </topic>
     
     <topic>
-      html\journalreport.html
-    </topic>
-    
-    <topic>
       html\costcenterreport.html
-    </topic>
-    
-    <topic>
-      html\views.html
-    </topic>
-    
-    <topic>
-      html\salessubjournallist.html
-    </topic>
-    
-    <topic>
-      html\documentimport.html
     </topic>
     
     <topic>
@@ -147,14 +159,6 @@
     
     <topic>
       html\faq.html
-    </topic>
-    
-    <topic>
-      html\subjournals.html
-    </topic>
-    
-    <topic>
-      html\businesspartners.html
     </topic>
     
   </topiclist>
