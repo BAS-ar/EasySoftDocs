@@ -14,11 +14,10 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="generator" content="Adobe RoboHelp 2022"/>
-  <title>subjournals</title>
+  <title>Código de clientes y proveedores</title>
   <meta name="topic-status" content="Draft"/>
   <link rel="stylesheet" type="text/css" href="../assets/css/manuales.css"/>
   <meta http-equiv="Content-Language" content="es-ES"/>
-  <meta name="search-keywords" content="ABM de Subdiarios"/>
 <meta name="rh-version" content="2022.4.179"/>
   
   
@@ -48,34 +47,45 @@
         <div class="RH-LAYOUT-CENTERPANEL-container">
           <div class="rh-layout-selectdetails" id="rh-selectdetails"></div>
           <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
-  <h1 class="Titulo1">Subdiarios</h1>
-  <p class="Texto">Acá podes dar de alta los subdiarios que vas a utilizar, pueden ser de compras, de ventas o de tipo otros. Este último podés utilizarlo, por ejemplo, para movimientos de caja o de bancos. </p>
-  <p class="Texto"><img class="imgreports" src="../assets/images/subjournals01.jpg"/></p>
-  <p class="Texto">Los subdiarios se utilizan al registrar comprobantes de ventas y de compras y también en las tareas de importación. Cuando realices dichas tareas tendrás que indicar en que subdiario se contabilizan los comprobantes que estás importando.</p>
-  <p class="Texto">Para dar de alta un subdiario al presionar &quot;+&quot; se abre una ventana donde tenes que ingresar una serie de datos.</p>
-  <p class="Texto"><img class="imgreports" src="../assets/images/subjournals02.jpg"/></p>
-  <p class="Texto">
-    <content class="palabranegrita">Código/Nombre</content>: Identifican al subdiario que estás definiendo.
-  </p>
-  <p class="Texto">
-    <content class="palabranegrita">
-      <content class="palabranegrita">
-        <content class="palabranegrita">Tipo</content>
+  <h1 class="Titulo1">Códigos de clientes y proveedores</h1>
+  <p class="Texto">Los códigos de clientes y proveedores son de tipo alfanumérico, podés crear los códigos que desees según tus necesidades. Si necesitás que los mismos se numeren de manera correlativa, uno a continuación del otro, es necesario crear una estructura de código.</p>
+  <p class="Texto"><span>La estructura puede ser de hasta 8 dígitos, hasta 4 para caracteres alfabéticos y deben ser como mínimo 4 para caracteres numéricos.</span></p>
+  <p class="Texto"><span>Podés no utilizar caracteres alfabéticos , mientras que los numéricos son obligatorios, y como mínimo 4.</span></p>
+  <p class="Texto"><span>En la pantalla de Clientes y Proveedores disponés, a la derecha, de un icono <img src="../assets/images/codingtemplate01.jpg"/>p<span>ara crear la estructura de código.</span></span></p>
+  <p class="Texto"><span><img class="imgreports" src="../assets/images/codingtemplate02.jpg"/></span></p>
+  <p class="Texto"><span></span>Al presionar el ícono para definir la estructura de código se despliega la pantalla para la configuración de los códigos de clientes y proveedores.</p>
+  <p class="Texto"><img class="imgreports" src="../assets/images/codingtemplate03.jpg"/></p>
+  <ul class="Texto_con_vinetas">
+    <li class="Texto">
+      <content class="palabranegrita">Caracteres alfabéticos:</content> Podés dejar el dato en blanco o ingresar como máximo hasta 4 caracteres. Tené en cuenta que se distiguen las mayúsculas de las minúsculas.
+    </li>
+    <li>
+      <content class="palabrasinegrita">
+        <content class="palabranegrita">Cantidad de caracteres numéricos</content>
       </content>
-    </content>: Podés elegir entre &quot;Compras&quot; y &quot;Ventas&quot;.
+      <content class="palabranegrita">:</content> Este dato es obligatorio y como mínimo debe ser de 4 números.
+    </li>
+  </ul>
+  <p class="Texto">
+    <content class="palabranegrita">Ejemplos válidos</content><span>
+      <content class="palabranegrita">:</content> 0001, 9999, A0001, AB123456, ABCD1234, 12345678.
+    </span>
   </p>
-  <p class="Texto">Una vez completados los datos, al guardarlos, Easysoft te confirma que la operación fue satisfactoria.</p>
-  <p class="Texto">Los subdiarios que definiste se muestran en la grilla inferior y podés modificar sus datos o eliminarlos si aún no registraste movimientos en ellos.</p>
-  <p class="Texto"><img class="imgreports" src="../assets/images/subjournals03.jpg"/></p>
-  <p class="Texto">Presionando el icono de visualización que se encuentra en cada línea de la grilla, accedés a la tarea de ingreso de comprobantes en el subdiario correspondiente.</p>
+  <p class="Texto">
+    <content class="palabranegrita">Ejemplos NO válidos:</content> <span>ABCDE123, <span>ABCD12345, <span>1234ABCD.</span></span></span>
+  </p>
+  <p class="Texto">En caso en que no hayas comenzado a registrar clientes o proveedores, el sistema te sugiere definir una estructura de código, independientemente de ello, podés hacerlo a posteriori.</p>
+  <p class="Texto"><img class="imgreports" src="../assets/images/codingtemplate04.jpg"/></p>
+  <p class="Texto">Por ejemplo, si definís una estructura de código que conste de 2 letras (AB) y 4 números, el código que te ofrecerá al crear un cliente o proveedor será AB0001.</p>
+  <p class="Texto"><img class="imgreports" src="../assets/images/codingtemplate05.jpg"/></p>
+  <p class="Texto"><img class="imgreports" src="../assets/images/codingtemplate06.jpg"/></p>
+  <p class="Texto" dir="auto">Los códigos de clientes o proveedores podés modificarlos, siempre y cuando respetes la estructura de código que definiste.</p>
   <h2 class="Titulo2">Temas que pueden interesarte</h2>
   <ul class="Texto_con_vinetas">
-    <li><a href="businesspartners.html">Clientes y proveedores</a></li>
+    <li><a href="businesspartners.html">Clientes y Proveedores</a></li>
     <li><a href="salessubjournallist.html">Comprobantes de ventas</a></li>
-    <li><a href="purchasessubjournallist.html">Comprobantes de compra</a></li>
+    <li><a href="purchasessubjournallist.html">Comprobantes de compras</a></li>
   </ul>
-  <p class="Texto"></p>
-  <p class="Texto"></p>
 
 </div>
           <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>
@@ -95,7 +105,7 @@
 
     gRootRelPath = ".."
     gCommonRootRelPath = ".."
-    gTopicId = "7.0_1"
+    gTopicId = "7.0_4"
   
 //]]></script>
 
