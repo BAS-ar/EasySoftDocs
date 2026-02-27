@@ -70,9 +70,9 @@ jobs:
 
       - name: 3. Sincronizar la carpeta /html con rsync
         run: |
-          echo "Sincronizando los archivos de 'source-docs/html/' a 'target-chatbot/HTML/'..."
-          mkdir -p target-chatbot/EasySoft/HTML
-          rsync -av --delete --exclude='.git/' source-docs/html/ target-chatbot/EasySoft/HTML/
+          echo "Sincronizando los archivos de 'source-docs/html/' a 'target-chatbot/html/'..."
+          mkdir -p target-chatbot/EasySoft/html
+          rsync -av --delete --exclude='.git/' source-docs/html/ target-chatbot/EasySoft/html/
         
       - name: 4. Hacer Commit y Push si hay cambios
         uses: stefanzweifel/git-auto-commit-action@v4
