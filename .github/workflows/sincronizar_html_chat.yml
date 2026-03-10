@@ -1,0 +1,53 @@
+name: Sincronizar HTMLs de EasySoftDocs a ChatEasySoft
+
+# Se activa en cada push a la rama principal de EasySoftdocs
+on:
+  push:
+    branches:
+      - main # O 'master' si tu rama principal se llama así
+
+jobs:
+  sync-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Descarga el código del repositorio de origen (EasySoftdocs)
+      - name: Checkout Source Repo (EasySoftdocs)
+        uses: actions/checkout@v4
+        with:
+          path: source-repo
+
+      # 2. Descarga el código del repositorio de destino (ChatEasySoft) en la rama 'develop'
+      - name: Checkout Destination Repo (ChatEasySoft)
+        uses: actions/checkout@v4
+        with:
+          repository: BAS-ar/ChatEasySoft
+          # Importante: Apunta directamente a la rama 'develop'
+          ref: develop
+          path: dest-repo
+          # Usamos el token con el nombre que me indicaste
+          token: ${{ secrets.CHATEASYSOFT }}
+
+      # 3. Copia y reemplaza la carpeta 'html'
+      - name: Replace HTML folder
+        run: |
+          rm -rf dest-repo/EasySoft/html
+          cp -r source-repo/html dest-repo/EasySoft/html
+          echo "HTML folder copied successfully."
+
+      # 4. Hace commit y push de los cambios DIRECTAMENTE a la rama 'develop'
+      - name: Commit and Push to Develop
+        run: |
+          cd dest-repo
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          # Comprueba si hay archivos modificados o nuevos para commitear
+          if [ -n "$(git status --porcelain)" ]; then
+            git add EasySoft/html
+            git commit -m "docs: Sync HTML documentation from EasySoftdocs"
+            # Sube los cambios directamente a la rama 'develop'
+            git push
+            echo "Documentation changes pushed to develop branch."
+          else
+            echo "No changes to sync."
+          fi
