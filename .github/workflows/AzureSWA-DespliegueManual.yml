@@ -1,4 +1,4 @@
-name: Despliegue Manual y Sincronización con ChatEasySoft (SWA)
+name: Despliegue Manual
 
 on:
   workflow_dispatch:
@@ -43,42 +43,3 @@ jobs:
           api_location: "false"
           output_location: "/"
           skip_app_build: true
-
-  # =================================================================
-  # JOB 2: SINCRONIZACIÓN CON EL REPOSITORIO DEL CHATBOT
-  # =================================================================
-  sync_to_chatbot_repo:
-    needs: build_and_deploy_job
-    runs-on: ubuntu-latest
-    name: Sincronizar con Repositorio del Chatbot
-
-    steps:
-      - name: 1. Checkout del Repositorio de Documentación (Origen)
-        uses: actions/checkout@v3
-        with:
-          path: source-docs
-
-      - name: 2. Checkout del Repositorio del Chatbot (Destino)
-        uses: actions/checkout@v3
-        with:
-          # --- CORRECCIÓN 1: Repositorio de destino correcto ---
-          repository: BAS-ar/ChatEasySoft 
-          path: target-chatbot
-          # --- CORRECIÓN 2: Nombre del secreto correcto ---
-          token: ${{ secrets.ChatEasySoft }} 
-          ref: main                     
-
-      - name: 3. Sincronizar la carpeta /html con rsync
-        run: |
-          echo "Sincronizando los archivos de 'source-docs/html/' a 'target-chatbot/html/'..."
-          mkdir -p target-chatbot/EasySoft/html
-          rsync -av --delete --exclude='.git/' source-docs/html/ target-chatbot/EasySoft/html/
-        
-      - name: 4. Hacer Commit y Push si hay cambios
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          repository: target-chatbot
-          commit_message: "chore(docs): Sincronización automática de documentación desde EasySoftDocs"
-          commit_user_name: "GitHub Actions Bot"
-          commit_user_email: "github-actions@github.com"
-          commit_author: "GitHub Actions Bot <github-actions@github.com>"
