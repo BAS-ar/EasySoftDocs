@@ -7,7 +7,7 @@ rh._.exports(defaultTopic);
 rh.consts('DEFAULT_TOPIC', encodeURI("html/user_profile.htm"));
 rh.consts('HOME_FILEPATH', encodeURI('index.htm'));
 rh.consts('START_FILEPATH', encodeURI('index.htm'));
-rh.consts('HELP_ID', '854bd243-4473-437e-9259-4d4ffcce3b14' || 'preview');
+rh.consts('HELP_ID', 'd4caa998-21cc-49c5-a62a-17d5d375a1f1' || 'preview');
 rh.consts('LNG_SUBSTR_SEARCH', 0);
 
 model.publish(rh.consts('KEY_LNG_NAME'), "es");
