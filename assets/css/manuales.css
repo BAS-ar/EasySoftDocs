@@ -281,6 +281,17 @@
   padding-right: 2px;
   padding-bottom: 2px;
   padding-left: 2px;
+  font-size: 1rem;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box table.tabla>thead th, .RH-LAYOUT-FOOTER-container table.tabla>thead th, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla>thead th {
+  border-left-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-width: 0.5px;
+  border-top-width: 0.5px;
+  border-right-width: 0.5px;
+  border-bottom-width: 0.5px;
 }
 .RH-LAYOUT-CENTERPANEL-topic-box table.tabla td:first-child, .RH-LAYOUT-FOOTER-container table.tabla td:first-child, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla td:first-child {
   text-align: right;
@@ -296,6 +307,14 @@
 .RH-LAYOUT-CENTERPANEL-topic-box table.tabla td, .RH-LAYOUT-FOOTER-container table.tabla td, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla td {
   padding-top: 10px;
   padding-left: 5px;
+  border-left-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-width: 0.5px;
+  border-top-width: 0.5px;
+  border-right-width: 0.5px;
+  border-bottom-width: 0.5px;
 }
 .RH-LAYOUT-CENTERPANEL-topic-box table.tabla th, .RH-LAYOUT-FOOTER-container table.tabla th, .RH-LAYOUT-HOMEPAGE-FOOTER-container table.tabla th {
   padding-top: 10px;
