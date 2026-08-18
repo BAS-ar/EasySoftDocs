@@ -30,8 +30,8 @@ jobs:
       # 3. Copia y reemplaza la carpeta 'html'
       - name: Replace HTML folder
         run: |
-          rm -rf dest-repo/EasySoft/html
-          cp -r source-repo/html dest-repo/EasySoft/html
+          rm -rf dest-repo/EasySoft/html/EasySoft
+          cp -r source-repo/html dest-repo/EasySoft/html/EasySoft
           echo "HTML folder copied successfully."
 
       # 4. Hace commit y push de los cambios DIRECTAMENTE a la rama 'develop'
@@ -43,7 +43,7 @@ jobs:
           
           # Comprueba si hay archivos modificados o nuevos para commitear
           if [ -n "$(git status --porcelain)" ]; then
-            git add EasySoft/html
+            git add EasySoft/html/EasySoft
             git commit -m "docs: Sync HTML documentation from EasySoftdocs"
             # Sube los cambios directamente a la rama 'develop'
             git push
