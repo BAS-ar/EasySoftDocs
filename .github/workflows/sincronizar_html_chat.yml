@@ -1,4 +1,4 @@
-name: Sincronizar HTMLs de EasySoftDocs a ChatEasySoft
+name: Sincronizar HTMLs de EasySoftDocs a ChatBotIA
 
 # Se activa en cada push a la rama principal de EasySoftdocs
 on:
@@ -17,10 +17,10 @@ jobs:
           path: source-repo
 
       # 2. Descarga el código del repositorio de destino (ChatEasySoft) en la rama 'develop'
-      - name: Checkout Destination Repo (ChatEasySoft)
+      - name: Checkout Destination Repo (ChatBotIA)
         uses: actions/checkout@v4
         with:
-          repository: BAS-ar/ChatEasySoft
+          repository: BAS-ar/ChatBotIA
           # Importante: Apunta directamente a la rama 'develop'
           ref: develop
           path: dest-repo
@@ -30,8 +30,8 @@ jobs:
       # 3. Copia y reemplaza la carpeta 'html'
       - name: Replace HTML folder
         run: |
-          rm -rf dest-repo/EasySoft/html/EasySoft
-          cp -r source-repo/html dest-repo/EasySoft/html/EasySoft
+          rm -rf dest-repo/ChatBotIA/html/EasySoft
+          cp -r source-repo/html dest-repo/ChatBotIA/html/EasySoft
           echo "HTML folder copied successfully."
 
       # 4. Hace commit y push de los cambios DIRECTAMENTE a la rama 'develop'
@@ -43,7 +43,7 @@ jobs:
           
           # Comprueba si hay archivos modificados o nuevos para commitear
           if [ -n "$(git status --porcelain)" ]; then
-            git add EasySoft/html/EasySoft
+            git add ChatBotIA/html/EasySoft
             git commit -m "docs: Sync HTML documentation from EasySoftdocs"
             # Sube los cambios directamente a la rama 'develop'
             git push
